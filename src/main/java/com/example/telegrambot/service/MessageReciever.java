@@ -15,8 +15,10 @@ import org.telegram.telegrambots.api.objects.stickers.Sticker;
 public class MessageReciever implements Runnable {
     private static final Logger log = Logger.getLogger(MessageReciever.class);
     private final int WAIT_FOR_NEW_MESSAGE_DELAY = 1000;
-    private Bot bot;
-    private Parser parser;
+    private final Bot bot;
+    private final Parser parser;
+
+    String url = "https://api.telegram.org/bot5292457825:AAEiB2jIsAB-3fYZ3QDSr-1TZSB53vRLmsA/getupdates/";
 
     public MessageReciever(Bot bot) {
         this.bot = bot;
